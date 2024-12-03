@@ -13,17 +13,16 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Endpoint for handling form submission
 app.post("/submit", async (req, res) => {
+    console.log("Request body received:", req.body);
+
     const { email, firstName } = req.body;
 
-    // Validate input
     if (!email || !firstName) {
         return res.status(400).send("Email and first name are required.");
     }
 
     try {
-        // Logic to send email using Gmail API
         await sendEmail(email, firstName);
         res.status(200).send("Email sent successfully!");
     } catch (error) {
