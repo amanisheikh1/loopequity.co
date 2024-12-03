@@ -1,122 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loop Equity</title>
-    <!-- Link to Google Fonts for a modern look -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* General Styling */
-        body {
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            min-height: 100vh;
-            color: #fff;
-            background-color: #0a0a0a;
-            background-image: url('pawel-czerwinski-edxkIZwKvJk-unsplash.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./resources/images/favicon.png" type="image/x-icon">
 
-        /* Header Styling */
-        header {
-            width: 100%;
-            padding: 20px 40px;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            background-color: rgba(10, 10, 10, 0.5); /* Increased transparency */
-        }
+        <title>Loop Equity</title>
+        <link href="./resources/css/index.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><img src="./resources/images/logo.png" alt="Loop Equity Logo"></li>
+                    <li><a href="#gamify">Free Growth Tool</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
-        .logo {
-            font-size: 1.5em;
-            font-weight: 400;
-            color: #ffffff;
-            text-decoration: none;
-            padding-left: 10px; /* Adds buffer space from the left edge */
-        }
+        <section id="attention" class="attention">
+            <h1>A new home for your software business</h1>
+            <h2>Loop Equity acquires small B2B SaaS businesses and scales them to the next level</h2>
+            <div class="standout-box">
+                <p>Are you a fit?</p>
+                <ul>
+                    <li><strong>Type: </strong>Vertical software designed to address the specific needs of  a niche industry <strong>OR</strong> Marketplace app that enhances the functionality of major platforms, such as Shopify apps.</li>
+                    <li><strong>Size: </strong>Approaching or have reached $10k - $30k MRR.</li>
+                    <li><strong>Terms: </strong>Open to seller financing part or all of the deal and sharing in the business’s future growth.</li>
+                </ul>
+                <p>If this sounds like your business, let’s explore what’s possible together.</p>
+                <a href="#perspective"><button>Learn More</button></a>
+            </div>
+        </section>
 
-        /* Main Content Styling */
-        .content {
-            text-align: center;
-            padding: 40px 20px;
-            max-width: 800px;
-        }
+        <section id="perspective" class="perspective">
+            <h3>Has your SaaS growth hit a plateau?</h3>
+            <p>Many bootstrapped SaaS founders hit a growth ceiling between $10k and $30k in MRR. At this stage, you’ve built something great, but scaling further can feel like an uphill battle. You’re faced with a tough decision:</p>
+            <ul>
+                <li>Hire others to help scale, eating into your profits.</li>
+                <li>Keep brute-forcing growth, risking burnout and stagnation.</li>
+                <li>Do nothing, leaving your business vulnerable to competitors and market shifts.</li>
+            </ul>
+        </section>
 
-        h1 {
-            font-size: 4.0em; /* Increased font size */
-            font-weight: 300; /* Set to normal weight (unbolded) */
-            color: #ffffff;
-            margin: 0 0 20px;
-            line-height: 1.2;
-        }
+        <section id="advantage" class="advantage">
+            <h3>A win-win exit for your SaaS business</h3>
+            <p>Loop Equity provides a solution that lets you step away with confidence while ensuring your business achieves its full potential.</p>
+            <ul>
+                <li><strong>Exit value:</strong> SaaS multiples are rising, making now a great time to secure a lucrative deal.</li>
+                <li><strong>Shared success:</strong> Seller financing allows for a higher valuation and gives you the opportunity to benefit from the business’s future growth without the burden of daily operations.</li>
+                <li><strong>Dedicated growth strategy:</strong> Time, energy and capital are poured into scaling the business, executing on proven playbooks and metric-based feedback loops.</li>
+                <li><strong>Transparent process:</strong> A smooth, stress-free transition that respects your business and aligns with your goals.</li>
+            </ul>
+            <p>Free yourself from the day-to-day grind so you can focus on what’s next.</p>
+        </section>
 
-        p.subtitle {
-            font-size: 1.2em;
-            color: #bbbbbb;
-            line-height: 1.5;
-            margin: 0 0 40px;
-        }
-
-        /* Footer Styling */
-        footer {
-            width: 100%;
-            padding: 20px 0;
-            background-color: rgba(26, 26, 26, 0.5); /* Increased transparency */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            color: white;
-        }
-
-        /* Centered Contact Links */
-        .footer-email {
-            font-size: 1.5em; /* Increased font size */
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 400;
-        }
-
-        .footer-email:hover {
-            color: #ff9000;
-        }
-
-        .footer-linkedin {
-            width: 40px;
-            height: 40px;
-        }
-
-    </style>
-</head>
-<body>
-
-    <!-- Header with Logo -->
-    <header>
-        <a href="#" class="logo">Loop Equity</a>
-    </header>
-
-    <!-- Main Content -->
-    <div class="content">
-        <h1>Micro SaaS Acquisitions</h1>
-        <p class="subtitle">Ready to move on? We provide a smooth exit for founders and dedicate time, energy and capital towards unlocking the full potential of your business.</p>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <a href="mailto:amani@loopequity.co" class="footer-email">amani@loopequity.co</a>
-        <a href="https://www.linkedin.com/in/amani-sheikh-41332a263/" target="_blank">
-            <img src="icons8-linkedin-100.png" alt="LinkedIn" class="footer-linkedin">
-        </a>
-    </footer>
-
-</body>
+        <section id="gamify" class="gamify">
+            <h3>Your next step</h3>
+            <p>Get a free Growth Ceiling Calculator sent straight to your inbox.</p>
+            <p>Use it to:</p>
+            <div class="points">
+                <ul>
+                    <li>Pinpoint when your revenue will plateau.</li>
+                    <li>Identify the growth lever with the best ROI on your time.</li>
+                    <li>Decide whether to double down or exit with confidence.</li>
+                </ul>
+            </div>
+            <img src="./resources/images/growthCeiling.png" alt="Growth Ceiling Calculator">
+        
+            <!-- Form Section -->
+            <div class="form-container">
+                <form action="/submit" method="POST" class="email-form">
+                    <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+                    <input type="email" id="email" name="email" placeholder="Enter your business email" required>
+                    <button type="submit">Get the Calculator</button>
+                </form>
+            </div>
+        </section>
+        <footer id="contact">
+            <h2>Contact</h2>
+            <ul>
+                <li>Email: <a href="mailto:amani@loopequity.co">amani@loopequity.co</a></li>
+                <li><a href="https://www.linkedin.com/in/amani-sheikh-41332a263/" target="_blank">LinkedIn</a></li>
+            </ul>
+        </footer>
+    </body>
 </html>

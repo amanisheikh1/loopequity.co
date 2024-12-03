@@ -1,0 +1,287 @@
+:root {
+    --primary-color: #F5793B;   /* Bright orange */
+    --secondary-color: #f79a6b; /* Soft orange */
+    --accent-color: #f1580c;    /* Deep orange */
+    --background-color: #ffffff; /* White */
+    --text-color: #0c056d;      /* Dark blue */
+    --footer-bg-color: #0c056d; /* Footer blue background */
+    --footer-text-color: #ffffff; /* Footer white text */
+    --button-hover-bg: #D9672A; /* Darker orange for hover */
+    --light-gray: #f6f6f6;      /* Soft light gray for sections */
+    --border-color: #e6e6e6;    /* Border color for subtle separation */
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --gradient-primary: linear-gradient(135deg, var(--text-color), #11079e);
+    --gradient-accent: linear-gradient(135deg, var(--accent-color), var(--primary-color), var(--accent-color));
+    --gradient-footer: linear-gradient(135deg, var(--text-color), #11079e);
+}
+
+html {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 16px;
+    line-height: 2;
+    scroll-padding-top: 5rem;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    text-align: center;
+}
+
+header {
+    background: var(--gradient-primary);
+    box-shadow: 0 0.125rem 0.625rem var(--shadow-color);
+    position: fixed;
+    height: 4.5rem;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+nav ul {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    color: var(--footer-text-color);
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+    transform: translateY(-0.125rem);
+}
+
+nav img {
+    width: 11rem;
+    object-fit: contain;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: transparent;
+    background-image: var(--gradient-accent);
+    background-clip: text;
+    -webkit-background-clip: text;
+    margin: 1.5rem 0;
+}
+
+h2, h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+p {
+    font-size: 1rem;
+}
+
+ul {
+    text-align: left;
+    line-height: 1.8;
+    padding-left: 1.5rem;
+    margin: 0 0 1rem;
+}
+
+li {
+    margin-bottom: 0.75rem;
+}
+
+section {
+    position: relative;
+    top: 4.5rem;
+    width: 90%;
+    max-width: 75rem;
+    margin: 1.25rem auto;
+    padding: 1rem 2rem;
+    background-color: var(--light-gray);
+    border: 0.0625rem solid var(--border-color);
+    border-radius: 0.9375rem;
+    box-shadow: 0 0.125rem 0.9375rem var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-0.625rem);
+    box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.2);
+}
+
+.standout-box {
+    background-image: var(--gradient-accent);
+    color: var(--footer-text-color);
+    border-radius: 0.9375rem;
+    padding: 2rem;
+    box-shadow: 0 0.125rem 1rem var(--shadow-color);
+    text-align: center;
+    margin-top: 2rem;
+    width: 75%;
+    justify-self: center;
+}
+
+button {
+    background: var(--gradient-primary);
+    color: var(--background-color);
+    padding: 0.625rem 1.25rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--button-hover-bg);
+    transform: translateY(-0.125rem);
+}
+
+footer {
+    background: var(--gradient-footer);
+    color: var(--footer-text-color);
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    top: 4.5rem;
+    font-size: 0.875rem;
+}
+
+footer h2 {
+    color: var(--footer-text-color);
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+footer a {
+    color: var(--footer-text-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--primary-color);
+}
+
+.perspective ul,
+.advantage ul {
+    padding-left: 1rem;
+}
+
+.perspective ul {
+    list-style-type: "❌ ";
+}
+
+.advantage ul {
+    list-style-type: "✅ ";
+}
+
+/* Gamify section improvements */
+.gamify img {
+    max-width: 75%;
+    height: auto;
+    border: 0.25rem solid var(--border-color);
+    border-radius: 0.9375rem;
+    margin-top: 1rem;
+}
+
+.gamify div {
+    justify-self: center;
+}
+
+.form-container {
+    background: var(--gradient-accent);
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 0.9375rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+form input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 0.0625rem solid var(--border-color);
+    border-radius: 0.3125rem;
+    width: 100%;
+    max-width: 25rem;
+}
+
+@media (max-width: 768px) {
+    /* Header Adjustments */
+    header {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 1rem 0.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem; /* Reduced gap for compact layout */
+        margin-top: 0.5rem;
+    }
+
+    nav img {
+        width: 8rem; /* Scale logo for smaller screens */
+        margin-bottom: 1rem;
+    }
+
+    nav a {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+
+    /* Section Adjustments */
+    section {
+        margin: 1rem 0.5rem; /* Add margin around sections for smaller screens */
+        padding: 1rem; /* Maintain comfortable padding */
+    }
+
+    .standout-box {
+        width: 90%; /* Adjust standout box width for smaller screens */
+        margin: 0 auto; /* Center the box */
+    }
+
+    footer ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    footer {
+        padding: 1rem 0.5rem; /* Add padding for compact layout */
+    }
+}
