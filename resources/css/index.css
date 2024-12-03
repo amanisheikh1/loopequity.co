@@ -139,7 +139,7 @@ section:hover {
     box-shadow: 0 0.125rem 1rem var(--shadow-color);
     text-align: center;
     margin-top: 2rem;
-    width: 60%;
+/*     width: 60%; */
     justify-self: center;
 }
 
