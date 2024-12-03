@@ -11,6 +11,7 @@
     --border-color: #e6e6e6;    /* Border color for subtle separation */
     --shadow-color: rgba(0, 0, 0, 0.1);
     --gradient-primary: linear-gradient(135deg, var(--text-color), #11079e);
+    --gradient-h1: linear-gradient(135deg, var(--accent-color), var(--secondary-color), var(--accent-color));
     --gradient-accent: linear-gradient(135deg, var(--accent-color), var(--primary-color), var(--accent-color));
     --gradient-footer: linear-gradient(135deg, var(--text-color), #11079e);
 }
@@ -83,7 +84,7 @@ h1 {
     font-size: 2.5rem;
     font-weight: 800;
     color: transparent;
-    background-image: var(--gradient-accent);
+    background-image: var(--gradient-h1);
     background-clip: text;
     -webkit-background-clip: text;
     margin: 1.5rem 0;
