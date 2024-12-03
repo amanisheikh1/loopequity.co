@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Endpoint for handling form submission
-app.post("/submit", async (req, res) => {
+app.post("/", async (req, res) => {
     const { email, firstName } = req.body;
 
     try {
