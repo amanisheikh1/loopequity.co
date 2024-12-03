@@ -151,6 +151,10 @@ section:hover {
     justify-self: center;
 }
 
+.standout-box h3 {
+    color: var(--footer-text-color);
+}
+
 button {
     background: var(--gradient-primary);
     color: var(--background-color);
