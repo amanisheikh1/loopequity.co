@@ -31,7 +31,6 @@ app.post("/submit", async (req, res) => {
     }
 });
 
-// Send email function
 async function sendEmail(recipientEmail, recipientName) {
     const oauth2Client = new google.auth.OAuth2(
         process.env.CLIENT_ID,
@@ -46,19 +45,21 @@ async function sendEmail(recipientEmail, recipientName) {
 
     const gmail = google.gmail({ version: "v1", auth: oauth2Client });
 
-    // Construct email content
+    // Construct email content with strict adherence to Gmail format
     const emailContent = `
-        To: ${recipientEmail}
-        Subject: Your Growth Ceiling Calculator
-        
-        Hi ${recipientName},
+To: ${recipientEmail}
+Subject: Your Growth Ceiling Calculator
 
-        Here’s the link to download your Growth Ceiling Calculator:
-        https://docs.google.com/spreadsheets/d/1ZDZ9upLWqttyeiUs4VimnkhqmxEhXDczFK6BDDobx_E/edit?usp=sharing
+Hi ${recipientName},
 
-        Best regards,
-        Amani
-    `;
+Here’s the link to download your Growth Ceiling Calculator:
+https://docs.google.com/spreadsheets/d/1ZDZ9upLWqttyeiUs4VimnkhqmxEhXDczFK6BDDobx_E/edit?usp=sharing
+
+Best regards,
+Amani
+    `.trim();
+
+    console.log("Constructed email content:", emailContent); // Debug log
 
     // Encode the email content in Base64 URL-safe format
     const encodedMessage = Buffer.from(emailContent)
@@ -67,20 +68,22 @@ async function sendEmail(recipientEmail, recipientName) {
         .replace(/\//g, "_")
         .replace(/=+$/, "");
 
+    console.log("Encoded email content:", encodedMessage); // Debug log
+
     try {
-        // Send the email
-        await gmail.users.messages.send({
+        const response = await gmail.users.messages.send({
             userId: "me",
             requestBody: {
                 raw: encodedMessage,
             },
         });
-        console.log(`Email sent to ${recipientEmail}`);
+        console.log("Email sent successfully:", response.data);
     } catch (error) {
-        console.error("Failed to send email:", error);
-        throw error; // Rethrow error for the calling function to handle
+        console.error("Failed to send email:", error.response?.data || error.message);
+        throw error;
     }
 }
+
 
 // Start server
 const PORT = process.env.PORT || 10000;
