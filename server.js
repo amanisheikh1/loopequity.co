@@ -43,11 +43,11 @@ async function sendEmail(recipientEmail, recipientName) {
         
         Hi ${recipientName},
 
-        Thank you for signing up! Here’s the link to download your Growth Ceiling Calculator:
-        [Insert Google Sheet Link]
+        Here’s the link to download your Growth Ceiling Calculator:
+        https://docs.google.com/spreadsheets/d/1ZDZ9upLWqttyeiUs4VimnkhqmxEhXDczFK6BDDobx_E/edit?usp=sharing
 
         Best regards,
-        Loop Equity
+        Amani
     `;
 
     const encodedMessage = Buffer.from(emailContent)
